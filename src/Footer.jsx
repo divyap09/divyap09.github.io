@@ -4,7 +4,7 @@ function Footer(){
 
   return(
     <div class="footer center">
-			<p>Copyrights @ 2022 Divya P. All rights reserved.</p>  
+			<p>Handcrafted by Divya P @2022</p>  
     </div>
   )
 }

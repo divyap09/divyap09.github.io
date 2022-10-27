@@ -1,9 +1,12 @@
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 :root{
   --background-color1:  #dfdfe2;
   --background-color2:  #1b1b32;
   --text-color-white: #f0f0f0;
   --hyper-link-active:  #303841;
 }
+
 
 *{
   margin: 0;
@@ -20,9 +23,18 @@ html{
   font-family: "Segoe UI", "Times New Roman";
 }
 
+body{
+  line-height: 1.4;
+}
+
 fieldset{
   border: none;
 }
+
+/*
+hr{
+  margin: 0 25vw;
+} */
 
 .center{
   align-items: center;
@@ -37,58 +49,176 @@ ul li{
   list-style: none; 
 }
 
+.bold-text{
+  font-weight: bold;
+}
+
 .header-nav{  /*nav  */
   position: fixed;
   background: var(--background-color2);
   display: flex;
   justify-content: flex-end;
-  /*
-  
-  flex-direction: row;
-  flex-wrap: nowrap; */
+  flex-direction: wrap;
   top: 0;
   left: 0;
   width: 100%;
+  height: 70px;
   z-index: 10;
 }
 
 .nav-list{ /*nav ul */
   display: flex;
   margin-right: 2rem;
+  margin-top: 0.5rem;
 }
 
 .nav-list a{
   color: var(--text-color-white);
-  padding: 22px 22px;
+  padding: 10px 16px;
   display: block;
+  font-size: 1.5rem;
 }
 
 .nav-list a:hover{
   background-color: var(--text-color-white);
   color: var(--background-color2);
+  border: 1px black solid;
+  border-radius: 05%;
+}
+/*
+#about-section{
+  height: 100vh;
+  width: 50%;
+  top: 220px;
+  display: block;
+  position: relative;
+  align-content: center;
+}*/
+
+.main-details{
+  position: relative;
 }
 
 #about-section{
   height: 100vh;
   width: 100%;
-  top: 220px;
-  text-align: center;
-  display: block;
-  position: relative;
+  display: flex;
+  /*position: relative; */
+  align-content: center;
+  margin:0;
+}
+
+#about-section fieldset{
+  top: 200px;
+  width: 50vw;
+  position: absolute;
+  padding: 0 5vw;
+  margin: 0;
+}
+
+#animated-screen{
+  width: 50vw;
+  height: 100vh;
+  right: 0;
+  position: absolute;
+  border: 1px black solid;
+  padding: 50px;
 }
 
 .intro{
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 4rem;
 }
+
+.description{
+  font-size: 1.3rem;
+  text-align: left;
+  
+}
+
+.description p{
+  animation: 3s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+/*
+#social-icons-div {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+*/
+.social-icons{
+  margin-top: 30px;
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: left;
+  padding-left: 5vw;
+}
+
+
+.contact-details i{
+  color: black;
+  padding: 0 1.2rem;
+}
+
+.info-section{
+  width: 100%;
+  height: 50vw;
+  padding: 6rem 2rem;
+}
+
+.experience-section{
+  width: 100%;
+  height: 50vw;
+  padding: 6rem 2rem;
+}
+
+#projects-section{
+  width: 100%;
+  height: 50vw;
+  padding: 6rem 2rem;
+}
+
+.flex-icons li{
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.flex-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/*
+.icons{
+  font-weight: 900;
+} */
 
 /*Footer section */
 .footer{
   bottom: 0;
   margin: 1rem;
 }
+
 .contact-section{
-  height: 30vh;
   width: 100%;
   bottom: 0;
   display: flex;
@@ -112,7 +242,7 @@ ul li{
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
-
+/*
 @media (max-width: 28.75em) {
   .nav {
     justify-content: center;
@@ -121,4 +251,26 @@ ul li{
   .nav-list {
     margin: 0 1rem;
   }
+}*/
+/*
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
 }
+*/
+/* 980px / 16px = 61.25em */
+/*
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}*/
+
+/* 460px / 16px = 28.75em */
+/*
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}*/
